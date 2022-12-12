@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'teamOrganiser';
+  showTeam:boolean=true;
+  onSelection(event:any){
+  if(event==='teams'){
+    this.showTeam=true
+  }
+  else{
+    this.showTeam=false
+  }
+  }
 }

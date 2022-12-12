@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,7 +10,6 @@ import { IndividualTeamComponent } from './teams/team-list/individual-team/indiv
 import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
 import { PlayersComponent } from './players/players.component';
 import { PlayerEditComponent } from './players/player-edit/player-edit.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +19,19 @@ import { PlayerEditComponent } from './players/player-edit/player-edit.component
     IndividualTeamComponent,
     TeamDetailComponent,
     PlayersComponent,
-    PlayerEditComponent
+    PlayerEditComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+   CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
+
+  ]
 })
 export class AppModule { }
