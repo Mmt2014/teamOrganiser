@@ -10,6 +10,8 @@ import { IndividualTeamComponent } from './teams/team-list/individual-team/indiv
 import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
 import { PlayersComponent } from './players/players.component';
 import { PlayerEditComponent } from './players/player-edit/player-edit.component';
+import { FormsModule } from '@angular/forms';
+import { MyDropdownDirective } from './shared/my-dropdown.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,14 +22,17 @@ import { PlayerEditComponent } from './players/player-edit/player-edit.component
     TeamDetailComponent,
     PlayersComponent,
     PlayerEditComponent,
+    MyDropdownDirective,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
+  
   schemas: [
    CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA

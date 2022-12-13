@@ -1,1 +1,9 @@
-<p>individual-team works!</p>
+<a (click)="onSelectingTeam()" class="list-group-item list-group-item-action clearfix">
+    <div class="float-start">
+        <h4>{{team.name}}</h4>
+        <p>{{team.description}}</p>
+    </div>
+    <div class="float-end">
+       <img [src]="team.logo" alt="logo" height="100px" width="100px">
+    </div>
+</a>

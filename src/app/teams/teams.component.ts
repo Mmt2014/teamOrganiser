@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Team } from './team.model';
 
 @Component({
   selector: 'app-teams',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./teams.component.css']
 })
 export class TeamsComponent {
+  selectedTeam:any = Team
+  onGettingSelectedTeam(team:Team){
+    this.selectedTeam=team;
+  }
 
 }

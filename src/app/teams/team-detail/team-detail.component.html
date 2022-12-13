@@ -1,11 +1,11 @@
 <div class="row"> 
     <div class="col-12">
-        <img height="=300px" width="300px" src="https://cdn1.vectorstock.com/i/1000x1000/64/45/colorful-people-group-team-logo-vector-22436445.jpg">
+        <img height="=300px" width="300px" [src]="teamSelected.logo">
     </div>
 </div>
 <div class="row"> 
     <div class="col-12">
-        <h1>Team Name</h1>
+        <h1>{{teamSelected.name}}</h1>
     </div>
 </div>
 <div class="row">
@@ -17,7 +17,7 @@
 </div>
 <div class="row">
     <div class="col-12">
-        description
+        {{teamSelected.description}}
     </div>
 </div>
 <div class="row">

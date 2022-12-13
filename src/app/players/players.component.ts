@@ -7,6 +7,7 @@ import {Player} from '../shared/players.model'
   styleUrls: ['./players.component.css']
 })
 export class PlayersComponent implements OnInit {
+
   players:Player[]=[];
   constructor(){
    this.players=[new Player('John','Batting'),new Player('Smit','Bowling')]
@@ -14,5 +15,7 @@ export class PlayersComponent implements OnInit {
   ngOnInit(): void {
     
   }
-
+ onAddPlayer(player:Player){
+   this.players.push(player)
+ }
 }

@@ -5,17 +5,8 @@
 </div>
 <div class="row">
     <div class="col-12">
-        <a href="#" *ngFor="let team of teams" class="list-group-item list-group-item-action clearfix">
-            <div class="float-start">
-                <h4>{{team.name}}</h4>
-                <p>{{team.description}}</p>
-            </div>
-            <div class="float-end">
-               <img [src]="team.logo" alt="logo" height="100px" width="100px">
-            </div>
-        </a>
+        <app-individual-team *ngFor="let team of teams" [team]=team (onTeamSelect)="onTeamSelect(team)"> </app-individual-team>
+        
     </div>
 </div>
-<app-individual-team>
 
-</app-individual-team>
