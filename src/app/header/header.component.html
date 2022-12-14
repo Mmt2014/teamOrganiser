@@ -7,11 +7,13 @@
         <li class="nav-item"><a (click)="onSelect('players')" class="nav-link">Players </a></li>                                                                                                                                      
 
     </ul>
-    <li class="dropdown ms-auto">
-        <button type="button" class="btn btn-primary dropdown-toggle ">Manage</button>
+    <div class="dropdown ms-auto" appMyDropdown>
+        <button class="btn btn-primary dropdown-toggle" type="button">Manage</button>
+          
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Logout</a></li>
+        
         </ul>
-    </li>
+    </div>
 </nav>

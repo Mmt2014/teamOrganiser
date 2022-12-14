@@ -12,6 +12,7 @@ import { PlayersComponent } from './players/players.component';
 import { PlayerEditComponent } from './players/player-edit/player-edit.component';
 import { FormsModule } from '@angular/forms';
 import { MyDropdownDirective } from './shared/my-dropdown.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import { MyDropdownDirective } from './shared/my-dropdown.directive';
     TeamDetailComponent,
     PlayersComponent,
     PlayerEditComponent,
-    MyDropdownDirective,
+    MyDropdownDirective
     
   ],
   imports: [
