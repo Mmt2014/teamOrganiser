@@ -7,7 +7,7 @@ import { ElementRef, HostBinding, HostListener,Renderer2 } from '@angular/core';
 export class MyDropdownDirective {
   @HostBinding('class.show')
   isOpen=false
-  renderer: any;
+  
   @HostListener('click')
   toggleOpen(){
     this.isOpen=!this.isOpen
@@ -21,6 +21,6 @@ export class MyDropdownDirective {
   }
   
 
-  constructor(private elementRef:ElementRef) { }
+  constructor(private elementRef:ElementRef,private renderer:Renderer2) { }
 
 }
