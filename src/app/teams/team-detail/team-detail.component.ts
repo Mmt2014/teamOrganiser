@@ -11,11 +11,14 @@ export class TeamDetailComponent implements OnInit{
 
 //@Input() teamSelected:any  =new Team('','','')
 teamSelected:any= Team
+
 constructor(public teamService:TeamService){
-  this.teamService.selectedTeam.subscribe((team:Team)=>{
-    this.teamSelected= team
+  
+  this.teamService.selectedTeam.subscribe((e:Team)=>{
+    this.teamSelected= e
+    
   })
-  console.log(this.teamSelected.name)
+  // console.log(this.teamSelected.name)
 }
 
 
@@ -24,12 +27,11 @@ constructor(public teamService:TeamService){
 
 
 ngOnInit():void{
-
+  
 }
 emit(){
-  this.teamService.reactiveData.emit()
+ 
 }
-onSelectingTeam(){
-  this.teamService.selectedTeam.emit()
+
 }
-}
+

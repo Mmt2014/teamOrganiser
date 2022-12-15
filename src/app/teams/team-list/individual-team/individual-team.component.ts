@@ -16,10 +16,9 @@ constructor(public teamService:TeamService){
   
   
  ngOnInit():void{
-
  }
 
  onSelectingTeam(){
-  console.log(this.teamService.getTeams())
+  this.teamService.selectedTeam.emit(this.team)
  }
 }

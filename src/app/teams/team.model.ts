@@ -1,10 +1,11 @@
+import { Player } from "../shared/players.model";
+
 export class Team{
-    name:string;
-    description:string;
-    logo:any;
-    constructor(name:string,description:string,logo:any){
+    
+    constructor( public name:string, public description:string,public logo:any, public players:Player[]){
         this.name=name;
         this.description=description;
-        this.logo=logo
+        this.logo=logo;
+        this.players =players
     }
 }

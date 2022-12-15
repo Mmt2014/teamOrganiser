@@ -14,7 +14,7 @@ export class TeamsComponent implements OnInit{
 
   }
   ngOnInit(): void {
-  
+   
   }
   onGettingSelectedTeam(team:Team){
     //this.selectedTeam=team;

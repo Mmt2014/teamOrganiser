@@ -21,7 +21,12 @@
     </div>
 </div>
 <div class="row">
+    <span style="font-weight:bold">Players in this Team</span>
     <div class="col-12">
-        Players
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let player of teamSelected.players">
+        {{player.name}} - {{player.keyskill}}
+         </li>
+        </ul>
     </div>
 </div>
