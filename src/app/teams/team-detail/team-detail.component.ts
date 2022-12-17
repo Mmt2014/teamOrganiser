@@ -29,8 +29,9 @@ constructor(public teamService:TeamService){
 ngOnInit():void{
   
 }
-emit(){
- 
+
+addPlayers(){
+  this.teamService.addPlayers(this.teamSelected.players)
 }
 
 }

@@ -11,4 +11,9 @@ export class PlayerService{
         this.players.push(newPlayer)
         this.playersChanged.emit(this.players.slice())
     }
+    addPlayersFromTeam(players:Player[]){
+        
+      this.players.push(...players);
+      this.playersChanged.emit(this.playersChanged)
+    }
 }

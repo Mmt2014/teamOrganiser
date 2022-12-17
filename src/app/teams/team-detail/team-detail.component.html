@@ -5,7 +5,7 @@
 </div>
 <div class="row"> 
     <div class="col-12">
-        <h1 (click)="emit()">{{teamSelected.name}}</h1>
+        <h1 >{{teamSelected.name}}</h1>
     </div>
 </div>
 <div class="row">
@@ -21,8 +21,10 @@
     </div>
 </div>
 <div class="row">
-    <span style="font-weight:bold">Players in this Team</span>
+    <button class="btn btn-primary" (click)="addPlayers()">Add Players</button>
+    <br>
     <div class="col-12">
+        <span style="font-weight:bold">Players in this Team</span>
         <ul class="list-group">
             <li class="list-group-item" *ngFor="let player of teamSelected.players">
         {{player.name}} - {{player.keyskill}}
