@@ -6,14 +6,14 @@ import { Component, EventEmitter,OnInit,Output } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() onSelection:EventEmitter<string>= new EventEmitter();
+  //@Output() onSelection:EventEmitter<string>= new EventEmitter();
   constructor() {}
 
   ngOnInit(): void{
 
   }
-  onSelect(pageName:string){
-   this.onSelection.emit(pageName)
-  }
+ // onSelect(pageName:string){
+ //  this.onSelection.emit(pageName)
+  //}
 
 }

@@ -19,6 +19,6 @@ constructor(public teamService:TeamService){
  }
 
  onSelectingTeam(){
-  this.teamService.selectedTeam.emit(this.team)
+  //this.teamService.selectedTeam.emit(this.team)
  }
 }

@@ -13,6 +13,7 @@ import { PlayerEditComponent } from './players/player-edit/player-edit.component
 import { FormsModule } from '@angular/forms';
 import { MyDropdownDirective } from './shared/my-dropdown.directive';
 import { PlayerService } from './shared/services/player.service';
+import { TeamStartComponent } from './teams/team-start/team-start.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PlayerService } from './shared/services/player.service';
     TeamDetailComponent,
     PlayersComponent,
     PlayerEditComponent,
-    MyDropdownDirective
+    MyDropdownDirective,
+    TeamStartComponent
     
   ],
   imports: [
