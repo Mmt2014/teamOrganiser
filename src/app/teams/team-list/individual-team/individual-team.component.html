@@ -1,4 +1,4 @@
-<a (click)="onSelectingTeam()" class="list-group-item list-group-item-action clearfix">
+<a [routerLink]="[id]" routerLinkActive="active" class="list-group-item list-group-item-action clearfix">
     <div class="float-start">
         <h4>{{team.name}}</h4>
         <p>{{team.description}}</p>
@@ -7,3 +7,4 @@
        <img [src]="team.logo" alt="logo" height="100px" width="100px">
     </div>
 </a>
+

@@ -14,10 +14,13 @@ export class TeamService{
     }
 
     getTeams(){
-        return this.teams
+      console.log("getting teams from the team service")
+        return this.teams.slice();
 
     }
-
+getTeam(index:number){
+   return this.teams;
+}
   addPlayers(players:Player[]){
      this.playerService.addPlayersFromTeam(players)
   }

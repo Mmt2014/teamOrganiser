@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
+
 import { Team } from '../../team.model';
 import { TeamService } from '../../team.service';
 
@@ -9,8 +10,9 @@ import { TeamService } from '../../team.service';
 })
 export class IndividualTeamComponent implements OnInit {
  @Input() team: any= Team;
+ @Input() id: any ;
  //@Output() onTeamSelect:EventEmitter<any>=new EventEmitter();
-constructor(public teamService:TeamService){
+constructor(public teamService:TeamService) {
 
 }
   
@@ -19,6 +21,7 @@ constructor(public teamService:TeamService){
  }
 
  onSelectingTeam(){
-  //this.teamService.selectedTeam.emit(this.team)
+  //this.teamService.teams.
+// this.teamService.selectedTeam.emit(this.team)
  }
 }

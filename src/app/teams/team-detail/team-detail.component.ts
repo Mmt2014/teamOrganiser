@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Team } from '../team.model';
 import { TeamService } from '../team.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-team-detail',
@@ -13,10 +13,22 @@ export class TeamDetailComponent implements OnInit{
 //@Input() teamSelected:any  =new Team('','','')
 teamSelected:any= Team
 
-constructor(public teamService:TeamService,private route:ActivatedRoute){
+constructor(public teamService:TeamService,private route:ActivatedRoute,private router:Router
+  ) {
   this.id=this.route.snapshot.params['id']
-  console.log("The selected Id is:",this.id);
-  this.route.params.subscribe
+  
+  this.route.params.subscribe((params)=>{
+    this.id=params['id'];
+    const data=this.teamService.getTeam(this.id);
+    data.filter((e:any,i)=>{
+      if (Number(this.id)===Number(i)) { //filter the data
+        this.teamSelected=e;
+        console.log(this.teamSelected)
+      }
+    })
+    // console.log(params)
+    
+  })
   //this.teamService.selectedTeam.subscribe((e:Team)=>{
     //this.teamSelected= e
     
@@ -35,6 +47,9 @@ ngOnInit():void{
 
 addPlayers(){
   this.teamService.addPlayers(this.teamSelected.players)
+}
+onEditTeam(){
+  this.router.navigate(["../",this.id,'edit'],{relativeTo:this.route})
 }
 
 }
