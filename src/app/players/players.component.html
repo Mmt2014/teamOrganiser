@@ -2,7 +2,7 @@
     <div class="col-10">
         <app-player-edit></app-player-edit>
         <ul class="list-group">
-            <a class="list-group-item" *ngFor="let player of players">
+            <a class="list-group-item" *ngFor="let player of players; let index=index" (click)="onClick(index)">
                 {{player.name}} ({{player.keyskill}})
             </a>
         </ul>

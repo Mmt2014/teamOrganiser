@@ -1,23 +1,25 @@
+<form (ngSubmit)="onAdd()" #playerForm="ngForm"> <!--here we use #for local reference by thi we can access form to this code-->
 <div class="row">
     <div class="col-12">
-        <form>
+       
          <div class="row">
             <div class="col-md-5 form-group">
              <label for="name">Name</label>
-             <input type="text" id="name" class="form-control" [(ngModel)] ="newName" [ngModelOptions]="{standalone: true}">
+             <input type="text" name="name" id="name" class="form-control" ngModel required>
             </div>
             <div class="col-md-3 form-group">
                 <label for="keyskill">Keyskill</label>
-                <input type="text" id="keyskill" class="form-control" [(ngModel)] ="newKeyskill" [ngModelOptions]="{standalone: true}">
+                <input type="text" name="keyskill" id="keyskill" class="form-control" ngModel required>
                </div>
          </div>
-        </form>
+        
     </div>
 </div>
 <div class="row">
     <div class="col-12 mb-2">
-        <button class="btn btn-success" type="submit" (click)="onAdd()">Add</button>
-        <button class="btn btn-danger" type="submit">Delete</button>
-        <button class="btn btn-primary" type="submit">Clear</button>
+        <button class="btn btn-success" type="submit" [disabled]="!playerForm.valid">{{editMode?'Update': 'Add'}}</button>
+        <button class="btn btn-danger" type="button">Delete</button>
+        <button class="btn btn-primary" type="button">Clear</button>
     </div>
 </div>
+</form>

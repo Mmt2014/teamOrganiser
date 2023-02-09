@@ -10,6 +10,8 @@ import { PlayerService } from '../shared/services/player.service';
 })
 export class PlayersComponent implements OnInit,OnDestroy{
 
+
+
   players:Player[]=[];
   subscription: any = Subscription
   constructor(public playerService:PlayerService){
@@ -20,6 +22,9 @@ export class PlayersComponent implements OnInit,OnDestroy{
   }
   ngOnInit(): void {
     
+  }
+  onClick(index:number){
+    this.playerService.indexToEdit.next(index)
   }
   ngOnDestroy(): void {
     
