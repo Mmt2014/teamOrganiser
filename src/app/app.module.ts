@@ -10,7 +10,7 @@ import { IndividualTeamComponent } from './teams/team-list/individual-team/indiv
 import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
 import { PlayersComponent } from './players/players.component';
 import { PlayerEditComponent } from './players/player-edit/player-edit.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyDropdownDirective } from './shared/my-dropdown.directive';
 import { PlayerService } from './shared/services/player.service';
 import { TeamStartComponent } from './teams/team-start/team-start.component';
@@ -34,7 +34,8 @@ import { TeamEditComponent } from './teams/team-edit/team-edit.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [PlayerService],
   bootstrap: [AppComponent],

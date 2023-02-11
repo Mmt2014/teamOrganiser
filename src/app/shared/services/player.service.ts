@@ -30,4 +30,8 @@ export class PlayerService{
       this.players.push(...players);
       this.playersChanged.next(this.players.slice())
     }
+    deletePlayer(index:number){
+       this.players.splice(index,1);
+       this.playersChanged.next(this.players.slice())
+    }
 }

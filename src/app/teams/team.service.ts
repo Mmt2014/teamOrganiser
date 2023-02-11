@@ -19,7 +19,7 @@ export class TeamService{
 
     }
 getTeam(index:number){
-   return this.teams;
+   return this.teams[index];
 }
   addPlayers(players:Player[]){
      this.playerService.addPlayersFromTeam(players)

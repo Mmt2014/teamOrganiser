@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class TeamDetailComponent implements OnInit{
  id:any;
+ 
 //@Input() teamSelected:any  =new Team('','','')
 teamSelected:any= Team
 
@@ -19,9 +20,11 @@ constructor(public teamService:TeamService,private route:ActivatedRoute,private 
   
   this.route.params.subscribe((params)=>{
     this.id=params['id'];
-    const data=this.teamService.getTeam(this.id);
-    data.filter((e:any,i)=>{
-      if (Number(this.id)===Number(i)) { //filter the data
+    const data:any=[]
+    data.push(this.teamService.getTeam(this.id));
+    // console.log("ddddd",data,typeof data)
+    data.filter((e:any,i:any): void=>{
+    if (Number(this.id)===Number(i)) { //filter the data
         this.teamSelected=e;
         console.log(this.teamSelected)
       }

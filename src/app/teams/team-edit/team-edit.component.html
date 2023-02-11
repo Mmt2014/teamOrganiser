@@ -1,1 +1,51 @@
-<p>team-edit works!</p>
+<div class="row">
+    <div class="col-12">
+        <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-12">
+                    <button
+                    type="submit"
+                    class="btn btn-success">Save</button>
+                    <button
+                    type="button"
+                    class="btn btn-danger">Cancel</button>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                        type="text"
+                        id="name"
+                        class="form-control" formControlName="name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="logo">Team Logo</label>
+                        <input
+                        type="text"
+                        id="logo"
+                        class="form-control" formControlName="logo">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea
+                        type="text"
+                        id="description"
+                        class="form-control"
+                        rows="6" formControlName="description"></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
